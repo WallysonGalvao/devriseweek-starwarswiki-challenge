@@ -1,13 +1,20 @@
-import React from 'react';
-import {Text, Logo} from '../../components';
+import React, { useEffect } from 'react';
+import { useNavigation } from '@react-navigation/native';
 
-import * as S from './styles';
+// import { Text, Logo, Container } from '../../components';
+import { Text, Logo, Container } from '~/components';
 
 export const SplashScreen = (): JSX.Element => {
+  const { navigate } = useNavigation();
+
+  useEffect(() => {
+    setTimeout(() => navigate('Home'), 1000);
+  }, [navigate]);
+
   return (
-    <S.Container>
+    <Container align="center" justify="center">
       <Logo />
       <Text>StarWars - Wiki</Text>
-    </S.Container>
+    </Container>
   );
 };

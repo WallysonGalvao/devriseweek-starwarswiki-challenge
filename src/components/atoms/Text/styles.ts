@@ -1,14 +1,14 @@
-import styled, {css} from 'styled-components/native';
+import styled, { css } from 'styled-components/native';
 
 type CustomTextProps = {
   color?: string;
 };
 
 export const CustomText = styled.Text<CustomTextProps>`
-  ${({color}) => css`
-    font-size: 24px;
-    color: ${color || 'white'};
+  ${({ theme, color }) => css`
+    font-size: ${theme.metrics.px(24)}px;
+    color: ${color || theme.colors.red};
+    margin-top: ${theme.metrics.px(12)}px;
     font-weight: bold;
-    margin-top: 12px;
   `}
 `;
