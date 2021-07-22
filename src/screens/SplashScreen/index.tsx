@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { useNavigation } from '@react-navigation/native';
 
-// import { Text, Logo, Container } from '../../components';
 import { Text, Logo, Container } from '~/components';
 
 export const SplashScreen = (): JSX.Element => {

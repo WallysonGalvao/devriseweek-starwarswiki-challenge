@@ -18,10 +18,13 @@
     "react": "17.0.1",
     "react-native": "0.64.1",
     "react-native-gesture-handler": "^1.10.3",
+    "react-native-linear-gradient": "^2.5.6",
     "react-native-reanimated": "^2.2.0",
     "react-native-safe-area-context": "^3.2.0",
     "react-native-screens": "^3.4.0",
-    "styled-components": "^5.3.0"
+    "react-native-vector-icons": "^8.1.0",
+    "styled-components": "^5.3.0",
+    "zustand": "^3.5.7"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
@@ -29,6 +32,7 @@
     "@react-native-community/eslint-config": "^2.0.0",
     "@types/jest": "^26.0.23",
     "@types/react-native": "^0.64.5",
+    "@types/react-native-vector-icons": "^6.4.8",
     "@types/react-test-renderer": "^16.9.2",
     "@types/styled-components-react-native": "^5.1.1",
     "@typescript-eslint/eslint-plugin": "^4.28.4",

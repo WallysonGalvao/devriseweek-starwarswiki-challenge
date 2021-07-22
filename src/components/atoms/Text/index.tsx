@@ -1,11 +1,20 @@
 import React from 'react';
-import { CustomText } from './styles';
 
-type TextProps = {
+import { theme } from '~/styles/theme';
+
+import * as S from './styles';
+
+export type TextProps = {
   children: React.ReactNode;
-  color?: string;
+  color?: keyof typeof theme.colors;
+  size?: number;
+  mt?: number;
+  mb?: number;
+  ml?: number;
+  mr?: number;
+  fontFamily?: keyof typeof theme.fonts;
 };
 
-export const Text = ({ children, color }: TextProps): JSX.Element => {
-  return <CustomText color={color}>{children}</CustomText>;
+export const Text = ({ children, ...props }: TextProps): JSX.Element => {
+  return <S.CustomText {...props}>{children}</S.CustomText>;
 };
