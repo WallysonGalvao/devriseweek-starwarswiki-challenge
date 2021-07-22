@@ -1,17 +1,26 @@
 import React from 'react';
-import { CardContainer, CardImage } from './styles';
+import { useNavigation } from '@react-navigation/native';
+
+import { SelectedDataProps, useDataStore } from '~/services/stores';
+
+import * as S from './styles';
 
 type CardProps = {
-  item: {
-    id: number;
-    image_url: string;
-  };
+  item: SelectedDataProps;
 };
 
 export const Card = ({ item }: CardProps): JSX.Element => {
+  const { setSelectedData } = useDataStore();
+  const { navigate } = useNavigation();
+
+  const onSelectItem = () => {
+    setSelectedData(item);
+    navigate('Detail');
+  };
+
   return (
-    <CardContainer>
-      <CardImage source={{ uri: item.image_url }} />
-    </CardContainer>
+    <S.CardContainer onPress={onSelectItem}>
+      <S.CardImage source={{ uri: item.image_url }} />
+    </S.CardContainer>
   );
 };

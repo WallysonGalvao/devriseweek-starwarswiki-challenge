@@ -2,27 +2,34 @@ import React from 'react';
 import { FlatList } from 'react-native';
 
 import { Card } from '~/components/molecules';
+import { Text } from '~/components/atoms';
+import { theme } from '~/styles/theme';
+import { SelectedDataProps } from '~/services/stores';
 
-const FAKE_DATA = [
-  {
-    id: 0,
-    image_url:
-      'https://sm.ign.com/ign_br/screenshot/default/darth-vader_5yvm.jpg',
-  },
-  {
-    id: 1,
-    image_url:
-      'https://network.grupoabril.com.br/wp-content/uploads/sites/4/2020/02/desafio-jedi-de-mestre-yoda-consertar-as-frases-consegue-vocecc82.jpg?quality=100&strip=info',
-  },
-];
+import * as S from './styles';
 
-export const HomeList = (): JSX.Element => {
+type HomeListProps = {
+  data: SelectedDataProps[];
+  title: string;
+};
+
+export const HomeList = ({ data, title }: HomeListProps): JSX.Element => {
   return (
-    <FlatList
-      horizontal
-      data={FAKE_DATA}
-      renderItem={({ item }) => <Card item={item} />}
-      keyExtractor={item => String(item.id)}
-    />
+    <S.ListContainer>
+      <Text ml={24} fontFamily="black" size={18}>
+        {title}
+      </Text>
+      <FlatList
+        horizontal
+        data={data}
+        renderItem={({ item }) => <Card item={item} />}
+        keyExtractor={item => String(item.id)}
+        contentContainerStyle={{
+          paddingTop: theme.metrics.px(12),
+          paddingLeft: theme.metrics.px(24),
+          paddingBottom: theme.metrics.px(24),
+        }}
+      />
+    </S.ListContainer>
   );
 };
