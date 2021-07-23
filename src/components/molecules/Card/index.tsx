@@ -1,12 +1,12 @@
 import React from 'react';
 import { useNavigation } from '@react-navigation/native';
 
-import { SelectedDataProps, useDataStore } from '~/services/stores';
+import { Film, useDataStore } from '~/services/stores';
 
 import * as S from './styles';
 
 type CardProps = {
-  item: SelectedDataProps;
+  item: Film;
 };
 
 export const Card = ({ item }: CardProps): JSX.Element => {

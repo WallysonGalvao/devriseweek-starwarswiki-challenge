@@ -5,6 +5,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import { Routes } from './routes';
 
 import { theme } from './styles/theme';
+import '~/config/flipper';
 
 Ionicons.loadFont();
 
