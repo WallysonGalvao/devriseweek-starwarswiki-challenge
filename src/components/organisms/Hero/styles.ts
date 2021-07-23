@@ -32,7 +32,15 @@ export const ButtonsView = styled.View`
     width: 100%;
     margin-top: ${theme.metrics.px(12)}px;
     flex-direction: row;
-    align-items: baseline;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+  `}
+`;
+
+export const ButtomItemView = styled.View<{ align?: string }>`
+  ${({ align }) => css`
+    flex: 1;
+    flex-direction: column;
+    align-items: ${align || 'center'};
   `}
 `;
