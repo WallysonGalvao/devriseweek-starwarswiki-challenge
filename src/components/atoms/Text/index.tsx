@@ -13,6 +13,7 @@ export type TextProps = {
   ml?: number;
   mr?: number;
   fontFamily?: keyof typeof theme.fonts;
+  lh?: number;
 };
 
 export const Text = ({ children, ...props }: TextProps): JSX.Element => {

@@ -1,20 +1,12 @@
 import create from 'zustand';
-
-export type SelectedDataProps = {
-  id: number;
-  image_url: string;
-  title?: string;
-  subtitle?: string;
-  type?: string;
-  description?: string;
-};
+import { Film } from '../hooks';
 
 type State = {
-  selectedData: SelectedDataProps;
-  setSelectedData: (selectedData: SelectedDataProps) => void;
+  selectedData: Film;
+  setSelectedData: (selectedData: Film) => void;
 };
 
 export const useDataStore = create<State>(set => ({
-  selectedData: {} as SelectedDataProps,
+  selectedData: {} as Film,
   setSelectedData: selectedData => set({ selectedData }),
 }));
