@@ -13,6 +13,7 @@ export type Film = {
   subtitle?: string;
   type?: string;
   description?: string;
+  trailer_url: string;
 };
 
 export type Characters = {
@@ -39,7 +40,7 @@ export const useGetData = (): GetDataReturn => {
 
   const getCharacters = async () => {
     try {
-      const response = await api.get('/character');
+      const response = await api.get('/characters');
       return response.data;
     } catch (error) {
       return { error };

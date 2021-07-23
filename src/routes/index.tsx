@@ -9,6 +9,7 @@ import {
   Detail,
   SearchScreen,
   FavoritesScreen,
+  WatchScreen,
 } from '~/screens';
 
 import { BottomBar } from '~/components';
@@ -17,6 +18,7 @@ export type RootStackParamList = {
   Splash: undefined;
   Home: undefined;
   Detail: undefined;
+  Watch: undefined;
 };
 
 export type RootBottomParamList = {
@@ -54,6 +56,7 @@ export const Routes = (): JSX.Element => {
         <Stack.Screen name="Splash" component={SplashScreen} />
         <Stack.Screen name="Home" component={BottomRoute} />
         <Stack.Screen name="Detail" component={Detail} />
+        <Stack.Screen name="Watch" component={WatchScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

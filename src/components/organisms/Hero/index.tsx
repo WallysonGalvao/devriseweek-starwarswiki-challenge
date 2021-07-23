@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigation } from '@react-navigation/native';
+
 import { Text, Logo } from '~/components/atoms';
-import { Tag, IconButton, PlayButton } from '~/components/molecules';
+import { Tag, IconButton, WatchButton } from '~/components/molecules';
 import { Film } from '~/services/hooks/useGetData';
 import { useFavorites } from '~/services/hooks';
+import { useDataStore } from '~/services/stores';
 
 import { colors } from '~/styles/colors';
 
@@ -14,8 +17,12 @@ type HeroProps = {
 };
 export const Hero = ({ item, onDetail }: HeroProps): JSX.Element => {
   // const [loading, setLoading] = useState(true);
-  const [isFavorite, setIsFavorite] = useState(false);
+  const { navigate } = useNavigation();
+
+  const { setSelectedData } = useDataStore();
   const { addFavorite, getFavorites, removeFavorite } = useFavorites();
+
+  const [isFavorite, setIsFavorite] = useState(false);
 
   const { image_url, title, subtitle, type } = item;
 
@@ -43,6 +50,11 @@ export const Hero = ({ item, onDetail }: HeroProps): JSX.Element => {
     checkIsFavorite();
   };
 
+  const onPressWatch = () => {
+    setSelectedData(item);
+    navigate('Watch');
+  };
+
   return (
     <S.HeroContainer>
       <S.HeroImageBackground source={{ uri: image_url }}>
@@ -54,23 +66,30 @@ export const Hero = ({ item, onDetail }: HeroProps): JSX.Element => {
           </Text>
           <Text size={18}>{subtitle}</Text>
           <S.ButtonsView>
-            <IconButton
-              onPress={() =>
-                isFavorite ? removeDataFromFavorite() : addDataToFavorite()
-              }
-              label={isFavorite ? 'Rem. Favoritos' : 'Add Favoritos'}
-              iconName={
-                isFavorite ? 'remove-circle-outline' : 'add-circle-outline'
-              }
-            />
-            <PlayButton />
-
-            {!onDetail && (
+            <S.ButtomItemView align="flex-start">
               <IconButton
-                label="Saiba mais"
-                iconName="information-circle-outline"
+                onPress={() =>
+                  isFavorite ? removeDataFromFavorite() : addDataToFavorite()
+                }
+                label={isFavorite ? 'Rem. Favoritos' : 'Add Favoritos'}
+                iconName={
+                  isFavorite ? 'remove-circle-outline' : 'add-circle-outline'
+                }
               />
-            )}
+            </S.ButtomItemView>
+
+            <S.ButtomItemView>
+              <WatchButton onPress={onPressWatch} />
+            </S.ButtomItemView>
+
+            <S.ButtomItemView align="flex-end">
+              {!onDetail && (
+                <IconButton
+                  label="Saiba mais"
+                  iconName="information-circle-outline"
+                />
+              )}
+            </S.ButtomItemView>
           </S.ButtonsView>
         </S.HeroGradient>
       </S.HeroImageBackground>
