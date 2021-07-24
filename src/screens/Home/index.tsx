@@ -1,5 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { ScreenScrollContainer, HomeList, Hero, Loader } from '~/components';
+import {
+  ScreenScrollContainer,
+  HomeList,
+  Hero,
+  Loader,
+  Container,
+} from '~/components';
 
 import { useGetData } from '~/services/hooks';
 import { Film, Characters } from '~/services/hooks/useGetData';
@@ -28,9 +34,9 @@ export const Home = (): JSX.Element => {
 
   if (loading) {
     return (
-      <ScreenScrollContainer>
+      <Container align="center" justify="center">
         <Loader />
-      </ScreenScrollContainer>
+      </Container>
     );
   }
 

@@ -1,15 +1,28 @@
 import React from 'react';
 import { useNavigation } from '@react-navigation/native';
 
-import { Film, useDataStore } from '~/services/stores';
+import { Film } from '~/services/hooks';
+import { useDataStore } from '~/services/stores';
 
 import * as S from './styles';
 
-type CardProps = {
-  item: Film;
+const sizes = {
+  small: {
+    h: 124,
+    w: 88,
+  },
+  large: {
+    h: 150,
+    w: 102,
+  },
 };
 
-export const Card = ({ item }: CardProps): JSX.Element => {
+type CardProps = {
+  item: Film;
+  size: string;
+};
+
+export const Card = ({ item, size }: CardProps): JSX.Element => {
   const { setSelectedData } = useDataStore();
   const { navigate } = useNavigation();
 
@@ -19,7 +32,9 @@ export const Card = ({ item }: CardProps): JSX.Element => {
   };
 
   return (
-    <S.CardContainer onPress={onSelectItem}>
+    <S.CardContainer
+      onPress={onSelectItem}
+      size={size ? sizes[size as keyof typeof sizes] : sizes.small}>
       <S.CardImage source={{ uri: item.image_url }} />
     </S.CardContainer>
   );

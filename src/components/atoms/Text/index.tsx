@@ -14,6 +14,7 @@ export type TextProps = {
   mr?: number;
   fontFamily?: keyof typeof theme.fonts;
   lh?: number;
+  align?: string;
 };
 
 export const Text = ({ children, ...props }: TextProps): JSX.Element => {

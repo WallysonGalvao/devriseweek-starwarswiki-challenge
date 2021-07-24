@@ -27,6 +27,7 @@ export type Characters = {
 type GetDataReturn = {
   getFilms: () => Promise<Film[] & Error>;
   getCharacters: () => Promise<Characters[] & Error>;
+  getSearchResult: (query: string) => Promise<Film[] & Error>;
 };
 export const useGetData = (): GetDataReturn => {
   const getFilms = async () => {
@@ -47,8 +48,18 @@ export const useGetData = (): GetDataReturn => {
     }
   };
 
+  const getSearchResult = async (query: string) => {
+    try {
+      const response = await api.get(`search?query=${query}`);
+      return response.data;
+    } catch (error) {
+      return { error };
+    }
+  };
+
   return {
     getFilms,
     getCharacters,
+    getSearchResult,
   };
 };
