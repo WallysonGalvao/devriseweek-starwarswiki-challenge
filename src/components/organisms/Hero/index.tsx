@@ -2,7 +2,12 @@ import React, { useEffect, useState } from 'react';
 import { useNavigation } from '@react-navigation/native';
 
 import { Text, Logo } from '~/components/atoms';
-import { Tag, IconButton, WatchButton } from '~/components/molecules';
+import {
+  Tag,
+  IconButton,
+  WatchButton,
+  FavoriteStateModal,
+} from '~/components/molecules';
 import { Film } from '~/services/hooks/useGetData';
 import { useFavorites } from '~/services/hooks';
 import { useDataStore } from '~/services/stores';
@@ -23,6 +28,9 @@ export const Hero = ({ item, onDetail }: HeroProps): JSX.Element => {
   const { addFavorite, getFavorites, removeFavorite } = useFavorites();
 
   const [isFavorite, setIsFavorite] = useState(false);
+  const [showFavoriteModal, setShowFavoriteModal] = useState<string | null>(
+    null
+  );
 
   const { image_url, title, subtitle, type } = item;
 
@@ -40,19 +48,34 @@ export const Hero = ({ item, onDetail }: HeroProps): JSX.Element => {
     checkIsFavorite();
   }, []);
 
+  const closeFavoriteModal = () => {
+    setTimeout(() => {
+      setShowFavoriteModal(null);
+    }, 1000);
+  };
+
   const addDataToFavorite = async () => {
     await addFavorite(item);
+    setShowFavoriteModal('added');
     checkIsFavorite();
+    closeFavoriteModal();
   };
 
   const removeDataFromFavorite = async () => {
     await removeFavorite(item);
+    setShowFavoriteModal('removed');
     checkIsFavorite();
+    closeFavoriteModal();
   };
 
   const onPressWatch = () => {
     setSelectedData(item);
     navigate('Watch');
+  };
+
+  const onPressDetail = () => {
+    setSelectedData(item);
+    navigate('Detail');
   };
 
   return (
@@ -85,6 +108,7 @@ export const Hero = ({ item, onDetail }: HeroProps): JSX.Element => {
             <S.ButtomItemView align="flex-end">
               {!onDetail && (
                 <IconButton
+                  onPress={onPressDetail}
                   label="Saiba mais"
                   iconName="information-circle-outline"
                 />
@@ -93,6 +117,13 @@ export const Hero = ({ item, onDetail }: HeroProps): JSX.Element => {
           </S.ButtonsView>
         </S.HeroGradient>
       </S.HeroImageBackground>
+      {!!showFavoriteModal && (
+        <FavoriteStateModal
+          type={showFavoriteModal}
+          visible={!!showFavoriteModal}
+          onClose={() => setShowFavoriteModal(null)}
+        />
+      )}
     </S.HeroContainer>
   );
 };

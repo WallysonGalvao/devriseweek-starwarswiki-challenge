@@ -3,7 +3,8 @@ import styled, { css } from 'styled-components/native';
 import { TextProps } from '.';
 
 export const CustomText = styled.Text<TextProps>`
-  ${({ theme, color, size, mt, mb, ml, mr, fontFamily, lh }) => css`
+  ${({ theme, color, size, mt, mb, ml, mr, fontFamily, lh, align }) => css`
+    text-align: ${align || 'left'};
     font-size: ${theme.metrics.px(size || 24)}px;
     color: ${theme.colors[color || 'white']};
     margin-top: ${theme.metrics.px(mt || 0)}px;
