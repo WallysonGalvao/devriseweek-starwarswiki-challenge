@@ -11,7 +11,7 @@ Ionicons.loadFont();
 
 const App = (): JSX.Element => (
   <ThemeProvider theme={theme}>
-    <StatusBar translucent backgroundColor={theme.colors.white} />
+    <StatusBar translucent barStyle="light-content" />
     <Routes />
   </ThemeProvider>
 );

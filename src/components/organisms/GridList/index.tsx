@@ -21,6 +21,22 @@ export const GridList = ({
   type,
   loading,
 }: GridListProps): JSX.Element => {
+  const renderEmpty = () => {
+    return (
+      <Container align="center" justify="center" h={500}>
+        <S.NoDataImage
+          resizeMode="contain"
+          source={type === 'favorites' ? noDataFavorites : noDataSearch}
+        />
+        <Text fontFamily="semibold" size={14} mt={12}>
+          {`Nenhum ${
+            type === 'favorites' ? 'favorito' : 'resultado'
+          } encontrado.`}
+        </Text>
+      </Container>
+    );
+  };
+
   return (
     <FlatList
       refreshing={loading}
@@ -29,19 +45,7 @@ export const GridList = ({
       renderItem={({ item }) => <Card size="large" item={item} />}
       keyExtractor={item => String(item.id)}
       ItemSeparatorComponent={() => <S.SeparatorView />}
-      ListEmptyComponent={() => (
-        <Container align="center" justify="center" h={500}>
-          <S.NoDataImage
-            resizeMode="contain"
-            source={type === 'favorites' ? noDataFavorites : noDataSearch}
-          />
-          <Text fontFamily="semibold" size={14} mt={12}>
-            {`Nenhum ${
-              type === 'favorites' ? 'favorito' : 'resultado'
-            } encontrado.`}
-          </Text>
-        </Container>
-      )}
+      ListEmptyComponent={renderEmpty}
     />
   );
 };
