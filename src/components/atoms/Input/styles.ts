@@ -9,7 +9,7 @@ export const InputContainer = styled.View<InputContainerProps>`
     justify-content: flex-start;
     width: ${theme.metrics.px(327)}px;
     height: ${theme.metrics.px(42)}px;
-    border-radius: ${theme.metrics.px(12)};
+    border-radius: ${theme.metrics.px(12)}px;
     border-width: ${theme.metrics.px(1)}px;
     border-color: ${theme.colors.light};
     padding: ${theme.metrics.px(6)}px;
