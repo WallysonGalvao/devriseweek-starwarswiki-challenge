@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Share } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
 import { Text, Logo } from '~/components/atoms';
@@ -78,6 +79,28 @@ export const Hero = ({ item, onDetail }: HeroProps): JSX.Element => {
     navigate('Detail');
   };
 
+  const onPressShare = async () => {
+    const url = 'https://www.sevenapps.tech';
+    try {
+      const result = await Share.share({
+        title: item.title,
+        message: item.description,
+        url,
+      });
+      if (result.action === Share.sharedAction) {
+        if (result.activityType) {
+          // shared with activity type of result.activityType
+        } else {
+          // shared
+        }
+      } else if (result.action === Share.dismissedAction) {
+        // dismissed
+      }
+    } catch (error) {
+      console.error(error.message);
+    }
+  };
+
   return (
     <S.HeroContainer>
       <S.HeroImageBackground source={{ uri: image_url }}>
@@ -106,11 +129,17 @@ export const Hero = ({ item, onDetail }: HeroProps): JSX.Element => {
             </S.ButtomItemView>
 
             <S.ButtomItemView align="flex-end">
-              {!onDetail && (
+              {!onDetail ? (
                 <IconButton
                   onPress={onPressDetail}
                   label="Saiba mais"
                   iconName="information-circle-outline"
+                />
+              ) : (
+                <IconButton
+                  onPress={onPressShare}
+                  label="Compartilhar"
+                  iconName="share-social"
                 />
               )}
             </S.ButtomItemView>
