@@ -1,12 +1,12 @@
 import create from 'zustand';
-import { Film } from '../hooks';
+import { DataResponse } from '../hooks';
 
 type State = {
-  selectedData: Film;
-  setSelectedData: (selectedData: Film) => void;
+  selectedData: DataResponse;
+  setSelectedData: (selectedData: DataResponse) => void;
 };
 
 export const useDataStore = create<State>(set => ({
-  selectedData: {} as Film,
+  selectedData: {} as DataResponse,
   setSelectedData: selectedData => set({ selectedData }),
 }));

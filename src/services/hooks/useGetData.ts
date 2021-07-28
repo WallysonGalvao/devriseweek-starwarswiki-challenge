@@ -6,7 +6,7 @@ type Error = {
   statusCode: number;
 };
 
-export type Film = {
+export type DataResponse = {
   id: number;
   image_url: string;
   title?: string;
@@ -16,23 +16,57 @@ export type Film = {
   trailer_url: string;
 };
 
-export type Characters = {
-  id: number;
-  description: string;
-  image_url: string;
-  subtitle: string;
-  title: string;
-};
+type PromiseReturn = DataResponse[] & Error;
 
 type GetDataReturn = {
-  getFilms: () => Promise<Film[] & Error>;
-  getCharacters: () => Promise<Characters[] & Error>;
-  getSearchResult: (query: string) => Promise<Film[] & Error>;
+  getFilms: () => Promise<PromiseReturn>;
+  getPlanets: () => Promise<PromiseReturn>;
+  getSpecies: () => Promise<PromiseReturn>;
+  getVehicles: () => Promise<PromiseReturn>;
+  getStarships: () => Promise<PromiseReturn>;
+  getCharacters: () => Promise<PromiseReturn>;
+  getSearchResult: (query: string) => Promise<PromiseReturn>;
 };
 export const useGetData = (): GetDataReturn => {
   const getFilms = async () => {
     try {
       const response = await api.get('/films');
+      return response.data;
+    } catch (error) {
+      return { error };
+    }
+  };
+
+  const getPlanets = async () => {
+    try {
+      const response = await api.get('/planets');
+      return response.data;
+    } catch (error) {
+      return { error };
+    }
+  };
+
+  const getSpecies = async () => {
+    try {
+      const response = await api.get('/species');
+      return response.data;
+    } catch (error) {
+      return { error };
+    }
+  };
+
+  const getVehicles = async () => {
+    try {
+      const response = await api.get('/vehicles');
+      return response.data;
+    } catch (error) {
+      return { error };
+    }
+  };
+
+  const getStarships = async () => {
+    try {
+      const response = await api.get('/starships');
       return response.data;
     } catch (error) {
       return { error };
@@ -59,6 +93,10 @@ export const useGetData = (): GetDataReturn => {
 
   return {
     getFilms,
+    getPlanets,
+    getSpecies,
+    getVehicles,
+    getStarships,
     getCharacters,
     getSearchResult,
   };

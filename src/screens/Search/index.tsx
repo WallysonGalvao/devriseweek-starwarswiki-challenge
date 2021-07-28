@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { ScreenScrollContainer, Text, GridList, Input } from '~/components';
-import { Film, useGetData } from '~/services/hooks';
+import { DataResponse, useGetData } from '~/services/hooks';
 
 export const SearchScreen = (): JSX.Element => {
   const { getSearchResult } = useGetData();
   const [loading, setLoading] = useState(false);
   const [query, setQuery] = useState('');
-  const [results, setResults] = useState<Film[]>([]);
+  const [results, setResults] = useState<DataResponse[]>([]);
 
   const callGetSearchResult = async () => {
     setLoading(true);

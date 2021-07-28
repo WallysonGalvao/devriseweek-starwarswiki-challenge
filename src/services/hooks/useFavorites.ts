@@ -1,5 +1,5 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { Film } from '~/services/hooks/useGetData';
+import { DataResponse } from '~/services/hooks/useGetData';
 
 const DB_KEY = '@StarWarsWiki:favorites';
 
@@ -8,14 +8,14 @@ type Error = {
 };
 
 type FavoritesReturn = {
-  addFavorite: (data: Film) => Promise<Film[] | Error>;
-  removeFavorite: (data: Film) => Promise<Film[] | Error>;
-  getFavorites: () => Promise<Film[] | []>;
+  addFavorite: (data: DataResponse) => Promise<DataResponse[] | Error>;
+  removeFavorite: (data: DataResponse) => Promise<DataResponse[] | Error>;
+  getFavorites: () => Promise<DataResponse[] | []>;
 };
 
 export const useFavorites = (): FavoritesReturn => {
-  // const addFavorite = async (data: Film): Promise<Film[] | Error> => {
-  const addFavorite = async (data: Film) => {
+  // const addFavorite = async (data: DataResponse): Promise<DataResponse[] | Error> => {
+  const addFavorite = async (data: DataResponse) => {
     try {
       let newDb;
       const value = await AsyncStorage.getItem(DB_KEY);
@@ -44,13 +44,13 @@ export const useFavorites = (): FavoritesReturn => {
     return [];
   };
 
-  const removeFavorite = async (data: Film) => {
+  const removeFavorite = async (data: DataResponse) => {
     try {
-      let newDb: Film[];
+      let newDb: DataResponse[];
       const value = await AsyncStorage.getItem(DB_KEY);
       if (value !== null) {
         // já existe um banco de dados
-        const db: Film[] = JSON.parse(value);
+        const db: DataResponse[] = JSON.parse(value);
 
         newDb = db.filter(fv => fv.id !== data.id && fv.title !== data.title);
       } else {
