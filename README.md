@@ -31,6 +31,8 @@
 
 <p align="center">
   <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-desafio">Desafio</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-funcionalidades">Funcionalidades</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#rocket-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#rocket-executando">Executando</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
@@ -74,7 +76,27 @@ Linkedin Gabriel: https://www.linkedin.com/in/gabrielrangelavila/
 Instagram Gabriel:
 https://www.instagram.com/gabriel.rangel7/
 
+## :iphone: Funcionalidades
+
+Foram desenvolvidas/implementadas as seguintes funcionalodades para compor o desafio:
+
+**1 - Home Screen:** adicionado seções para planetas, espécies, naves e veículos do universo de Star Wars, toda a parte de requisição a API foi desenvolvida, porém não existe endpoint para retornar as requisições, aguardando a DevRise Week Beckend :sunglasses:
+
+**2 - Detail Screen:**
+
+- 2.1 - adicionado um botão para compartilhamento, o usuário pode compartilhar filmes ou personagens com outras aplicações como Whatsapp, Twitter e etc.
+- 2.2 - adicionado uma seção para informar as plataformas que possuem o filme disponível para assistir, a requisição é feita via axios na RapidAPI.
+
+**3 - Theme Screen:** adicionado uma tela para escolha do tema da aplicação, essa tela tem disponível alguns símbolos do universo Star Wars, cada símbolo possuí uma cor que ao ser escolhia muda a cor de alguns detalhes da aplicação como a cor do ícone e texto do menu, esse gerenciamento é feito via Zustand e AsyncStorage.
+
+**4 - Splash Screen:** aqui foi adicionado uma animação com Lottie, tanto na SplashScreen como o carregamento da imagem da Home são feitas via arquivos json do Lottie, a cor da imagem é escolhida via tema da aplicação, ou seja, de acordo com o tema selecionado a cor no json também é mudado, tudo feito de forma dinâmica.
+
 ## 🎨 Layout
+
+<h1 align="center">
+      <img alt="Logo Star Wars Wiki" title="#sevenapps" src=".github/mockup1.png" width="400px" />
+      <img alt="Logo Star Wars Wiki" title="#sevenapps" src=".github/mockup2.png" width="400px" />
+</h1>
 
 Você pode encontrar o layout nesse link do [Figma](https://www.figma.com/file/FcJqDIFJpy43Zik4QhoJ39/DevRiseWeek---StarWars?node-id=31%3A27)
 

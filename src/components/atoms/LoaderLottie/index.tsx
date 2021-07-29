@@ -63,7 +63,7 @@ export const LoaderLottie = ({
         ...item,
         color: theme.colors.primary,
       })),
-    []
+    [selectedTheme]
   );
 
   return (
