@@ -3,13 +3,11 @@ import {
   ScreenScrollContainer,
   HomeList,
   Hero,
-  Loader,
   Container,
+  LoaderLottie,
 } from '~/components';
 
-import * as themes from '~/styles/themes';
 import { useGetData } from '~/services/hooks';
-import { useDataStore } from '~/services/stores';
 import { DataResponse } from '~/services/hooks/useGetData';
 
 export const Home = (): JSX.Element => {
@@ -21,9 +19,6 @@ export const Home = (): JSX.Element => {
     getStarships,
     getVehicles,
   } = useGetData();
-
-  const { selectedTheme } = useDataStore();
-  const theme = themes[selectedTheme];
 
   const [loading, setLoading] = useState(true);
   const [films, setFilms] = useState<DataResponse[]>([]);
@@ -57,7 +52,7 @@ export const Home = (): JSX.Element => {
   if (loading) {
     return (
       <Container align="center" justify="center">
-        <Loader color={theme.colors.primary} />
+        <LoaderLottie loading />
       </Container>
     );
   }

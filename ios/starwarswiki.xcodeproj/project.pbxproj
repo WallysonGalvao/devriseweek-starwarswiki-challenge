@@ -13,6 +13,7 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		478D58C8B8C2410CA243870E /* SourceSansPro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4950BECF7E344B9BB68B3409 /* SourceSansPro-Regular.ttf */; };
+		4D3E3D9E26B2EFBA00AF4C10 /* Dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3E3D9D26B2EFBA00AF4C10 /* Dummy.swift */; };
 		5BFFFF7E687A466FA6741D84 /* SourceSansPro-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 599E673DA9DD44FB99686508 /* SourceSansPro-Black.ttf */; };
 		70056188555A4F4CABA57B38 /* SourceSansPro-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BDAC13FD313E4E8980CD6F85 /* SourceSansPro-Bold.ttf */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
@@ -40,15 +41,17 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = starwarswiki/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = starwarswiki/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = starwarswiki/main.m; sourceTree = "<group>"; };
-		16C6CC16FEF04A1CB7CB3142 /* SourceSansPro-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "SourceSansPro-SemiBold.ttf"; path = "../src/assets/fonts/SourceSansPro-SemiBold.ttf"; sourceTree = "<group>"; };
-		4950BECF7E344B9BB68B3409 /* SourceSansPro-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "SourceSansPro-Regular.ttf"; path = "../src/assets/fonts/SourceSansPro-Regular.ttf"; sourceTree = "<group>"; };
+		16C6CC16FEF04A1CB7CB3142 /* SourceSansPro-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SourceSansPro-SemiBold.ttf"; path = "../src/assets/fonts/SourceSansPro-SemiBold.ttf"; sourceTree = "<group>"; };
+		4950BECF7E344B9BB68B3409 /* SourceSansPro-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SourceSansPro-Regular.ttf"; path = "../src/assets/fonts/SourceSansPro-Regular.ttf"; sourceTree = "<group>"; };
+		4D3E3D9C26B2EFBA00AF4C10 /* starwarswiki-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "starwarswiki-Bridging-Header.h"; sourceTree = "<group>"; };
+		4D3E3D9D26B2EFBA00AF4C10 /* Dummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dummy.swift; sourceTree = "<group>"; };
 		52792B68A9FB938ED46384EA /* Pods-starwarswiki-starwarswikiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-starwarswiki-starwarswikiTests.debug.xcconfig"; path = "Target Support Files/Pods-starwarswiki-starwarswikiTests/Pods-starwarswiki-starwarswikiTests.debug.xcconfig"; sourceTree = "<group>"; };
-		599E673DA9DD44FB99686508 /* SourceSansPro-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "SourceSansPro-Black.ttf"; path = "../src/assets/fonts/SourceSansPro-Black.ttf"; sourceTree = "<group>"; };
+		599E673DA9DD44FB99686508 /* SourceSansPro-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SourceSansPro-Black.ttf"; path = "../src/assets/fonts/SourceSansPro-Black.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = starwarswiki/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		93A93FC94B0DDF4C883EE298 /* libPods-starwarswiki.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-starwarswiki.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E77074871AF0BD10FD0AEAC /* libPods-starwarswiki-starwarswikiTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-starwarswiki-starwarswikiTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2C2E99143D37A998E7312D8 /* Pods-starwarswiki-starwarswikiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-starwarswiki-starwarswikiTests.release.xcconfig"; path = "Target Support Files/Pods-starwarswiki-starwarswikiTests/Pods-starwarswiki-starwarswikiTests.release.xcconfig"; sourceTree = "<group>"; };
-		BDAC13FD313E4E8980CD6F85 /* SourceSansPro-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "SourceSansPro-Bold.ttf"; path = "../src/assets/fonts/SourceSansPro-Bold.ttf"; sourceTree = "<group>"; };
+		BDAC13FD313E4E8980CD6F85 /* SourceSansPro-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SourceSansPro-Bold.ttf"; path = "../src/assets/fonts/SourceSansPro-Bold.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		EE531F8699925478DE7200BD /* Pods-starwarswiki.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-starwarswiki.debug.xcconfig"; path = "Target Support Files/Pods-starwarswiki/Pods-starwarswiki.debug.xcconfig"; sourceTree = "<group>"; };
 		F0D1D2C30EA3B2B650252E28 /* Pods-starwarswiki.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-starwarswiki.release.xcconfig"; path = "Target Support Files/Pods-starwarswiki/Pods-starwarswiki.release.xcconfig"; sourceTree = "<group>"; };
@@ -100,7 +103,6 @@
 				16C6CC16FEF04A1CB7CB3142 /* SourceSansPro-SemiBold.ttf */,
 			);
 			name = Resources;
-			path = "";
 			sourceTree = "<group>";
 		};
 		13B07FAE1A68108700A75B9A /* starwarswiki */ = {
@@ -134,7 +136,6 @@
 				52792B68A9FB938ED46384EA /* Pods-starwarswiki-starwarswikiTests.debug.xcconfig */,
 				B2C2E99143D37A998E7312D8 /* Pods-starwarswiki-starwarswikiTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -148,6 +149,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				4D3E3D9D26B2EFBA00AF4C10 /* Dummy.swift */,
 				13B07FAE1A68108700A75B9A /* starwarswiki */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* starwarswikiTests */,
@@ -155,6 +157,7 @@
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				30506D16F94A610407D4207B /* Pods */,
 				0DB72E6899AF44E9B19FEE4F /* Resources */,
+				4D3E3D9C26B2EFBA00AF4C10 /* starwarswiki-Bridging-Header.h */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -229,7 +232,7 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						LastSwiftMigration = 1120;
+						LastSwiftMigration = 1250;
 					};
 				};
 			};
@@ -437,6 +440,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				4D3E3D9E26B2EFBA00AF4C10 /* Dummy.swift in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -456,6 +460,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 52792B68A9FB938ED46384EA /* Pods-starwarswiki-starwarswikiTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -483,6 +488,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B2C2E99143D37A998E7312D8 /* Pods-starwarswiki-starwarswikiTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = starwarswikiTests/Info.plist;
@@ -523,6 +529,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = starwarswiki;
+				SWIFT_OBJC_BRIDGING_HEADER = "starwarswiki-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -548,6 +555,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = starwarswiki;
+				SWIFT_OBJC_BRIDGING_HEADER = "starwarswiki-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
