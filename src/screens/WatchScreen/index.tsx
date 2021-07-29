@@ -3,12 +3,12 @@ import YoutubePlayer from 'react-native-youtube-iframe';
 
 import { Container, GoBack } from '~/components';
 import { useDataStore } from '~/services/stores';
-
-import { theme } from '~/styles/theme';
+import * as themes from '~/styles/themes';
 
 export const WatchScreen = (): JSX.Element => {
   const [playing, setPlaying] = useState(false);
-  const { selectedData } = useDataStore();
+  const { selectedData, selectedTheme } = useDataStore();
+  const theme = themes[selectedTheme];
 
   const youtubeId = useMemo(() => {
     const id = selectedData.trailer_url.split('v=')[1].substring(0, 11);

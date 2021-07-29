@@ -10,6 +10,7 @@ import {
   SearchScreen,
   FavoritesScreen,
   WatchScreen,
+  ThemeScreen,
 } from '~/screens';
 
 import { BottomBar } from '~/components';
@@ -25,6 +26,7 @@ export type RootBottomParamList = {
   Home: undefined;
   Search: undefined;
   Favorites: undefined;
+  Theme: undefined;
 };
 
 const BottomRoute = () => {
@@ -42,6 +44,11 @@ const BottomRoute = () => {
         options={{ tabBarLabel: 'Favoritos' }}
         name="Favorites"
         component={FavoritesScreen}
+      />
+      <Tab.Screen
+        options={{ tabBarLabel: 'Tema' }}
+        name="Theme"
+        component={ThemeScreen}
       />
     </Tab.Navigator>
   );

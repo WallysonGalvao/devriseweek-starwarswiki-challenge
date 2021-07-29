@@ -1,18 +1,18 @@
 import React from 'react';
 
-import { theme } from '~/styles/theme';
+import * as themes from '~/styles/themes';
 
 import * as S from './styles';
 
 export type TextProps = {
   children: React.ReactNode;
-  color?: keyof typeof theme.colors;
+  color?: keyof typeof themes.empire.colors;
   size?: number;
   mt?: number;
   mb?: number;
   ml?: number;
   mr?: number;
-  fontFamily?: keyof typeof theme.fonts;
+  fontFamily?: keyof typeof themes.empire.fonts;
   lh?: number;
   align?: string;
 };

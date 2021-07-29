@@ -3,7 +3,8 @@ import { FlatList } from 'react-native';
 
 import { Card } from '~/components/molecules';
 import { Text } from '~/components/atoms';
-import { theme } from '~/styles/theme';
+import * as themes from '~/styles/themes';
+import { useDataStore } from '~/services/stores';
 import { DataResponse } from '~/services/hooks/useGetData';
 
 import * as S from './styles';
@@ -15,6 +16,9 @@ type HomeListProps = {
 };
 
 export const HomeList = ({ data, title, type }: HomeListProps): JSX.Element => {
+  const { selectedTheme } = useDataStore();
+  const theme = themes[selectedTheme];
+
   if (!data.length)
     return (
       <S.ListContainer>

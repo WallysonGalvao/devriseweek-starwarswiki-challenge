@@ -1,8 +1,10 @@
 import React from 'react';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { BottomTabBarProps } from '@react-navigation/bottom-tabs';
+
 import { Text } from '~/components/atoms';
-import { theme } from '~/styles/theme';
+import * as themes from '~/styles/themes';
+import { useDataStore } from '~/services/stores';
 
 import * as S from './styles';
 
@@ -10,6 +12,7 @@ const routeIcons = {
   Home: 'home-outline',
   Search: 'search-outline',
   Favorites: 'heart-outline',
+  Theme: 'cog',
 };
 
 export const BottomBar = ({
@@ -17,6 +20,9 @@ export const BottomBar = ({
   descriptors,
   navigation,
 }: BottomTabBarProps): JSX.Element | null => {
+  const { selectedTheme } = useDataStore();
+  const theme = themes[selectedTheme];
+
   const focusedOptions = descriptors[state.routes[state.index].key].options;
 
   if (focusedOptions.tabBarVisible === false) return null;
@@ -51,6 +57,8 @@ export const BottomBar = ({
           });
         };
 
+        // console.log(theme.colors.primary);
+
         return (
           <S.BarItem
             key={route.key}
@@ -63,12 +71,12 @@ export const BottomBar = ({
             <Ionicons
               size={theme.metrics.px(20)}
               name={routeIcons[route.name as keyof typeof routeIcons]}
-              color={isFocused ? theme.colors.red : theme.colors.white}
+              color={isFocused ? theme.colors.primary : theme.colors.white}
             />
             <Text
               fontFamily="semibold"
               size={10}
-              color={isFocused ? 'red' : 'white'}>
+              color={isFocused ? 'primary' : 'white'}>
               {label}
             </Text>
           </S.BarItem>

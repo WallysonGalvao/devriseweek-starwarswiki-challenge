@@ -1,6 +1,12 @@
 import styled from 'styled-components/native';
 
-export const Loader = styled.ActivityIndicator.attrs({
-  size: 'large',
-  color: 'red',
-})``;
+type LoaderProps = {
+  color: string;
+};
+
+export const Loader = styled.ActivityIndicator.attrs<LoaderProps>(
+  ({ color }) => ({
+    size: 'large',
+    color,
+  })
+)``;
