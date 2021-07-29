@@ -1,13 +1,21 @@
 import React from 'react';
 
-import { ScreenScrollContainer, Hero, GoBack, Text } from '~/components';
+import {
+  ScreenScrollContainer,
+  Hero,
+  GoBack,
+  Text,
+  WhereToWatchList,
+} from '~/components';
 import { useDataStore } from '~/services/stores';
 
 export const Detail = (): JSX.Element => {
   const { selectedData } = useDataStore();
+
   return (
     <ScreenScrollContainer>
       <Hero item={selectedData} onDetail />
+      {selectedData.type === 'Filme' && <WhereToWatchList />}
       <Text ml={24} fontFamily="black" size={18}>
         Descrição
       </Text>

@@ -1,0 +1,98 @@
+[
+  {
+    "Query": "a ameaça fantasma",
+    "Watch": "Imdb",
+    "WatchUrl": "https://www.imdb.com/title/tt0120915/",
+    "Company": {
+      "Name": "Imdb",
+      "Description": "The Internet Movie Database Inc. (IMDb) provides information about films. The Company gets its data from on-screen credits, promotional materials, autobiographies, interviews, and visitors to the IMDb website. The IMDb website is available internationally.",
+      "LogoUrl": "http://logo.bigpicture.io/logo/imdb.com",
+      "Twitter": "https://twitter.com/IMDb",
+      "Facebook": "https://www.facebook.com/imdb"
+    }
+  },
+  {
+    "Query": "a ameaça fantasma",
+    "Watch": "Death Star",
+    "WatchUrl": "https://www.starwars.com/films/star-wars-episode-i-the-phantom-menace",
+    "Company": {
+      "Name": "Death Star",
+      "Description": "The official site for Star Wars, featuring the latest on Star Wars: The Rise of Skywalker and The Mandalorian, as well as Star Wars series, video games, books, and more.",
+      "LogoUrl": "http://logo.bigpicture.io/logo/starwars.com",
+      "Twitter": "https://twitter.com/starwars",
+      "Facebook": "https://www.facebook.com/starwars"
+    }
+  },
+  {
+    "Query": "a ameaça fantasma",
+    "Watch": "Google",
+    "WatchUrl": "https://play.google.com/store/movies/details/StarWarsAAmea%25C3%25A7aFantasmaLegendado%3Fid%3DRHAceTF-zUc%26hl%3DenUS%26gl%3DUS",
+    "Company": {
+      "Name": "Google",
+      "Description": "Google, LLC is an American multinational technology company that specializes in Internet-related services and products, which include online advertising technologies, a search engine, cloud computing, software, and hardware.",
+      "LogoUrl": "http://logo.bigpicture.io/logo/google.com",
+      "Twitter": "https://twitter.com/GoogleWallet",
+      "Facebook": "https://www.facebook.com/googwallet/timeline"
+    }
+  },
+  {
+    "Query": "a ameaça fantasma",
+    "Watch": "Rotten Tomatoes",
+    "WatchUrl": "https://www.rottentomatoes.com/m/starwarsepisodeithephantommenace",
+    "Company": {
+      "Name": "Rotten Tomatoes",
+      "Description": "Serving up fresh and rotten reviews for movies and TV.",
+      "LogoUrl": "http://logo.bigpicture.io/logo/rottentomatoes.com",
+      "Twitter": "https://twitter.com/rottentomatoes",
+      "Facebook": "https://www.facebook.com/rottentomatoes"
+    }
+  },
+  {
+    "Query": "a ameaça fantasma",
+    "Watch": "Disney+ | Stream all of Disney, Marvel, Pixar, Star Wars, National Geographic, and more…",
+    "WatchUrl": "https://www.disneyplus.com/movies/star-wars-the-phantom-menace-episode-i/2ezYynkgW1AH",
+    "Company": {
+      "Name": "Disney+ | Stream all of Disney, Marvel, Pixar, Star Wars, National Geographic, and more…",
+      "Description": "Disney+ is the exclusive home for your favorite movies and TV shows from Disney, Pixar, Marvel, Star Wars, and National Geographic. Start streaming today.",
+      "LogoUrl": "http://logo.bigpicture.io/logo/disneyplus.com",
+      "Twitter": "",
+      "Facebook": ""
+    }
+  },
+  {
+    "Query": "a ameaça fantasma",
+    "Watch": "Youtube",
+    "WatchUrl": "https://www.youtube.com/watch%3Fv%3Dda8s9m4zEpo",
+    "Company": {
+      "Name": "Youtube",
+      "Description": "Enjoy the videos and music you love, upload original content, and share it all with friends, family, and the world on YouTube.",
+      "LogoUrl": "http://logo.bigpicture.io/logo/youtube.com",
+      "Twitter": "",
+      "Facebook": ""
+    }
+  },
+  {
+    "Query": "a ameaça fantasma",
+    "Watch": "CBS Interactive",
+    "WatchUrl": "https://www.metacritic.com/movie/star-wars-episode-i---the-phantom-menace",
+    "Company": {
+      "Name": "CBS Interactive",
+      "Description": "Metacritic aggregates music, game, tv, and movie reviews from the leading critics. Only Metacritic.com uses METASCORES, which let you know at a glance how each item was reviewed.",
+      "LogoUrl": "http://logo.bigpicture.io/logo/metacritic.com",
+      "Twitter": "https://twitter.com/metacritic",
+      "Facebook": "https://www.facebook.com/metacritic"
+    }
+  },
+  {
+    "Query": "a ameaça fantasma",
+    "Watch": "Pinterest",
+    "WatchUrl": "https://ar.pinterest.com/pin/819725569650242701/",
+    "Company": {
+      "Name": "Pinterest",
+      "Description": "Pinterest, Inc. provides visual discovery engine in the United States and internationally. The company's engine allows people to find inspiration for their lives, including recipes, style and home inspiration, DIY, and others. It shows them visual recommendations based on people personal taste and interests. The company was formerly known as Cold Brew Labs Inc. and changed its name to Pinterest, Inc. in April 2012. Pinterest, Inc. was founded in 2008 and is headquartered in San Francisco, California.",
+      "LogoUrl": "http://logo.bigpicture.io/logo/pinterest.com",
+      "Twitter": "https://twitter.com/Pinterest",
+      "Facebook": "https://www.facebook.com/pinterest"
+    }
+  }
+]
