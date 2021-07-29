@@ -5,7 +5,7 @@ import { Text } from '~/components/atoms';
 import { useDataStore } from '~/services/stores';
 import { DataWTWResponse, useWhereToWatch } from '~/services/hooks';
 
-// import platforms from './platforms.json';
+import platformsMock from './platforms.json';
 
 import * as S from './styles';
 
@@ -13,7 +13,7 @@ export const WhereToWatchList = (): JSX.Element => {
   const { selectedData } = useDataStore();
   const { getWhereToWatch } = useWhereToWatch();
 
-  const [platforms, setPlatforms] = useState<DataWTWResponse[]>([]);
+  const [platforms, setPlatforms] = useState<DataWTWResponse[]>(platformsMock);
 
   const callget = async () => {
     const query = `${selectedData.subtitle}`;
