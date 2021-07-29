@@ -94,8 +94,8 @@ Foram desenvolvidas/implementadas as seguintes funcionalodades para compor o des
 ## 🎨 Layout
 
 <h1 align="center">
-      <img alt="Logo Star Wars Wiki" title="#sevenapps" src=".github/mockup1.png" width="400px" />
-      <img alt="Logo Star Wars Wiki" title="#sevenapps" src=".github/mockup2.png" width="400px" />
+      <img alt="Logo Star Wars Wiki" title="#sevenapps" src=".github/Mockup1.png" width="400px" />
+      <img alt="Logo Star Wars Wiki" title="#sevenapps" src=".github/Mockup2.png" width="400px" />
 </h1>
 
 Você pode encontrar o layout nesse link do [Figma](https://www.figma.com/file/FcJqDIFJpy43Zik4QhoJ39/DevRiseWeek---StarWars?node-id=31%3A27)
