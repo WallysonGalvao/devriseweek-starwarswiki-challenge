@@ -29,5 +29,6 @@ export const FavoriteImage = styled.Image`
   ${({ theme }) => css`
     height: ${theme.metrics.px(80)}px;
     width: ${theme.metrics.px(80)}px;
+    tint-color: ${theme.colors.primary};
   `}
 `;

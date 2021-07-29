@@ -61,7 +61,7 @@ export const Home = (): JSX.Element => {
     <ScreenScrollContainer>
       <Hero
         item={{
-          ...(films[0] as DataResponse),
+          ...films[0],
           type: 'Filme',
         }}
       />

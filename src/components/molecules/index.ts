@@ -4,3 +4,4 @@ export * from './IconButton';
 export * from './WatchButton';
 export * from './FavoriteStateModal';
 export * from './SymbolCard';
+export * from './PageTitle';

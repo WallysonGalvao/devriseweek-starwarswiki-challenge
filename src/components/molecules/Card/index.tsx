@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigation } from '@react-navigation/native';
 
+import { Text } from '~/components/atoms';
 import { DataResponse } from '~/services/hooks';
 import { useDataStore } from '~/services/stores';
 
@@ -28,14 +29,21 @@ export const Card = ({ item, size }: CardProps): JSX.Element => {
 
   const onSelectItem = () => {
     setSelectedData(item);
-    navigate('Detail', { type: item.type });
+    navigate('Detail');
   };
 
   return (
-    <S.CardContainer
-      onPress={onSelectItem}
-      size={size ? sizes[size as keyof typeof sizes] : sizes.small}>
-      <S.CardImage source={{ uri: item.image_url }} />
-    </S.CardContainer>
+    <S.Container>
+      <S.CardContainer
+        onPress={onSelectItem}
+        size={size ? sizes[size as keyof typeof sizes] : sizes.small}>
+        <S.CardImage source={{ uri: item.image_url }} />
+      </S.CardContainer>
+      <S.TextContainer>
+        <Text size={14} align="center">
+          {item.title}
+        </Text>
+      </S.TextContainer>
+    </S.Container>
   );
 };

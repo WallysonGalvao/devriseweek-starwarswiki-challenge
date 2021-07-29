@@ -27,11 +27,13 @@ export const SymbolCard = ({
   };
 
   return (
-    <S.CardContainer onPress={handleTheme} isSelected={selectedTheme === theme}>
-      <S.CardImage source={imageSource} />
+    <S.SymbolCardContainer
+      onPress={handleTheme}
+      isSelected={selectedTheme === theme}>
+      <S.SymbolCardImage source={imageSource} />
       <Text mt={5} size={16} align="center">
         {title}
       </Text>
-    </S.CardContainer>
+    </S.SymbolCardContainer>
   );
 };

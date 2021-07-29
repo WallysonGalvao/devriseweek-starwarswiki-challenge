@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { FlatList } from 'react-native';
-import { ScreenContainer, SymbolCard, Text } from '~/components';
+import { PageTitle, ScreenContainer, SymbolCard } from '~/components';
 
 import { items, ItemTypes } from './items';
 
@@ -20,9 +20,7 @@ export const ThemeScreen = (): JSX.Element => {
 
   return (
     <ScreenContainer>
-      <Text fontFamily="bold" size={28} mb={24}>
-        Temas
-      </Text>
+      <PageTitle title="Temas" />
       <FlatList
         data={items}
         keyExtractor={keyExtractor}

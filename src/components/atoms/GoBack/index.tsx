@@ -16,7 +16,7 @@ export const GoBack = (): JSX.Element => {
     <S.GoBackContainer onPress={() => goBack()}>
       <Ionicons
         name="chevron-back"
-        color={theme.colors.white}
+        color={theme.colors.primary}
         size={theme.metrics.px(28)}
       />
     </S.GoBackContainer>

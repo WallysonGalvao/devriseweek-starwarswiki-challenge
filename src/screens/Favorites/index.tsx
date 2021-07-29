@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigation } from '@react-navigation/native';
 
-import { ScreenContainer, Text, GridList } from '~/components';
+import { ScreenContainer, GridList, PageTitle } from '~/components';
 import { DataResponse, useFavorites } from '~/services/hooks';
 
 export const FavoritesScreen = (): JSX.Element => {
@@ -26,9 +26,7 @@ export const FavoritesScreen = (): JSX.Element => {
 
   return (
     <ScreenContainer>
-      <Text fontFamily="bold" size={28} mb={24}>
-        Favoritos
-      </Text>
+      <PageTitle title="Favoritos" />
       <GridList type="favorites" data={favoritesList} />
     </ScreenContainer>
   );

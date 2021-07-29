@@ -28,7 +28,7 @@ export const GridList = ({
           resizeMode="contain"
           source={type === 'favorites' ? noDataFavorites : noDataSearch}
         />
-        <Text fontFamily="semibold" size={14} mt={12}>
+        <Text fontFamily="semibold" size={14} mt={12} color="primary">
           {`Nenhum ${
             type === 'favorites' ? 'favorito' : 'resultado'
           } encontrado.`}

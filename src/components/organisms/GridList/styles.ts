@@ -10,5 +10,6 @@ export const NoDataImage = styled.Image`
   ${({ theme }) => css`
     width: ${theme.metrics.px(48)}px;
     height: ${theme.metrics.px(48)}px;
+    tint-color: ${theme.colors.primary};
   `}
 `;

@@ -1,15 +1,20 @@
-import styled from 'styled-components/native';
+import styled, { css } from 'styled-components/native';
 
 export const ScrollView = styled.ScrollView.attrs({
   horizontal: true,
   showsHorizontalScrollIndicator: false,
 })`
-  margin-left: 24px;
+  ${({ theme }) => css`
+    margin-left: ${theme.metrics.px(24)}px;
+  `}
 `;
 
 export const Card = styled.TouchableOpacity`
-  margin-right: 10px;
-  margin-vertical: 10px;
+  ${({ theme }) => css`
+    margin-right: ${theme.metrics.px(10)}px;
+    margin-top: ${theme.metrics.px(10)}px;
+    margin-bottom: ${theme.metrics.px(30)}px;
+  `}
 `;
 
 export const Image = styled.Image`

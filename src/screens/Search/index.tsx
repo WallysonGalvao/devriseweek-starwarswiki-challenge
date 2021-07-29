@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ScreenContainer, Text, GridList, Input } from '~/components';
+import { ScreenContainer, GridList, Input, PageTitle } from '~/components';
 import { DataResponse, useGetData } from '~/services/hooks';
 
 export const SearchScreen = (): JSX.Element => {
@@ -26,9 +26,7 @@ export const SearchScreen = (): JSX.Element => {
 
   return (
     <ScreenContainer>
-      <Text fontFamily="bold" size={28} mb={24}>
-        Pesquisar
-      </Text>
+      <PageTitle title="Pesquisar" />
       <Input
         mb={24}
         value={query}

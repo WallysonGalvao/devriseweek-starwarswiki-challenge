@@ -25,7 +25,7 @@ export const HomeList = ({ data, title, type }: HomeListProps): JSX.Element => {
         <Text ml={24} fontFamily="black" size={18}>
           {title}
         </Text>
-        <Text ml={24} mt={12} mb={24} fontFamily="black" size={14}>
+        <Text ml={24} mt={12} mb={24} fontFamily="regular" size={14}>
           Em breve na próxima DRW Backend :)
         </Text>
       </S.ListContainer>

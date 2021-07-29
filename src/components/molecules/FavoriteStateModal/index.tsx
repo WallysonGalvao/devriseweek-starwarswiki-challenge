@@ -24,7 +24,12 @@ export const FavoriteStateModal = ({
           <S.FavoriteImage
             source={type === 'added' ? favoriteAdded : favoriteRemoved}
           />
-          <Text mt={24} align="center" size={28} fontFamily="bold">{`Favorito ${
+          <Text
+            mt={24}
+            align="center"
+            size={28}
+            fontFamily="bold"
+            color="primary">{`Favorito ${
             type === 'added' ? 'adicionado' : 'removido'
           } com sucesso!`}</Text>
         </S.ModalContentContainer>
