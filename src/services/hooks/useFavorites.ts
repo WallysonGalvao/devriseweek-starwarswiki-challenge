@@ -14,7 +14,6 @@ type FavoritesReturn = {
 };
 
 export const useFavorites = (): FavoritesReturn => {
-  // const addFavorite = async (data: DataResponse): Promise<DataResponse[] | Error> => {
   const addFavorite = async (data: DataResponse) => {
     try {
       let newDb;

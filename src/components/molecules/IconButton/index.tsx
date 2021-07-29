@@ -2,7 +2,8 @@ import React from 'react';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import { Text } from '~/components/atoms';
-import { theme } from '~/styles/theme';
+import * as themes from '~/styles/themes';
+import { useDataStore } from '~/services/stores';
 
 import * as S from './styles';
 
@@ -17,6 +18,9 @@ export const IconButton = ({
   label,
   onPress,
 }: iIconButtonProps): JSX.Element => {
+  const { selectedTheme } = useDataStore();
+  const theme = themes[selectedTheme];
+
   return (
     <S.ButtonContainer onPress={onPress}>
       <Ionicons

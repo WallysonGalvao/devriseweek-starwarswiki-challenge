@@ -7,7 +7,7 @@ export const TagContainer = styled.View<TagProps>`
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: ${theme.colors.red};
+    background-color: ${theme.colors.primary};
     height: ${theme.metrics.px(24)}px;
     border-radius: ${theme.metrics.px(24)}px;
     max-width: ${theme.metrics.px(88)}px;

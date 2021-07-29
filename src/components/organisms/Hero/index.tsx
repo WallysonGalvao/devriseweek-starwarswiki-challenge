@@ -105,7 +105,7 @@ export const Hero = ({ item, onDetail }: HeroProps): JSX.Element => {
     <S.HeroContainer>
       <S.HeroImageBackground source={{ uri: image_url }}>
         <S.HeroGradient colors={[colors.dark, 'transparent', colors.dark]}>
-          {!onDetail && <Logo size="small" />}
+          {!onDetail && <Logo size="medium" />}
           <Tag mt={onDetail ? 224 : 200}>{type}</Tag>
           <Text fontFamily="bold" size={28} mt={8}>
             {title}
