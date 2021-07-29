@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ScreenScrollContainer, Text, GridList, Input } from '~/components';
+import { ScreenContainer, Text, GridList, Input } from '~/components';
 import { DataResponse, useGetData } from '~/services/hooks';
 
 export const SearchScreen = (): JSX.Element => {
@@ -25,7 +25,7 @@ export const SearchScreen = (): JSX.Element => {
   }, [query]);
 
   return (
-    <ScreenScrollContainer withPadding>
+    <ScreenContainer>
       <Text fontFamily="bold" size={28} mb={24}>
         Pesquisar
       </Text>
@@ -36,6 +36,6 @@ export const SearchScreen = (): JSX.Element => {
         placeholder="Filme ou nome do personagem"
       />
       <GridList loading={loading} data={results} type="search" />
-    </ScreenScrollContainer>
+    </ScreenContainer>
   );
 };

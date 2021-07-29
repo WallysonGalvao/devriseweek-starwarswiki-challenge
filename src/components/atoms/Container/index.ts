@@ -11,7 +11,7 @@ type ContainerProps = {
   h?: number;
 };
 
-type ScreenScrollContainerProps = {
+type ScreenContainerProps = {
   bg?: keyof typeof colors;
   withPadding?: boolean;
 };
@@ -28,7 +28,7 @@ export const Container = styled.View<ContainerProps>`
   `}
 `;
 
-export const ScreenScrollContainer = styled.ScrollView.attrs<ScreenScrollContainerProps>(
+export const ScreenScrollContainer = styled.ScrollView.attrs<ScreenContainerProps>(
   ({ theme, withPadding }) => ({
     contentContainerStyle: withPadding
       ? {
@@ -37,8 +37,17 @@ export const ScreenScrollContainer = styled.ScrollView.attrs<ScreenScrollContain
         }
       : {},
   })
-)<ScreenScrollContainerProps>`
+)<ScreenContainerProps>`
   ${({ theme, bg }) => css`
     background-color: ${theme.colors[bg || 'dark']};
+  `}
+`;
+
+export const ScreenContainer = styled.View<{ bg?: keyof typeof colors }>`
+  ${({ theme, bg }) => css`
+    flex: 1;
+    background-color: ${theme.colors[bg || 'dark']};
+    padding-horizontal: ${theme.metrics.px(24)}px;
+    padding-vertical: ${theme.metrics.px(56)}px;
   `}
 `;
