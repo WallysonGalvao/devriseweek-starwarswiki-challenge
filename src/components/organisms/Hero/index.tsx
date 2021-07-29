@@ -8,7 +8,7 @@ import {
   WatchButton,
   FavoriteStateModal,
 } from '~/components/molecules';
-import { Film } from '~/services/hooks/useGetData';
+import { DataResponse } from '~/services/hooks/useGetData';
 import { useFavorites } from '~/services/hooks';
 import { useDataStore } from '~/services/stores';
 
@@ -17,7 +17,7 @@ import { colors } from '~/styles/colors';
 import * as S from './styles';
 
 type HeroProps = {
-  item: Film;
+  item: DataResponse;
   onDetail?: boolean;
 };
 export const Hero = ({ item, onDetail }: HeroProps): JSX.Element => {

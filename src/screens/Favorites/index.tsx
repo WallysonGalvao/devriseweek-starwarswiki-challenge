@@ -2,13 +2,13 @@ import React, { useEffect, useState } from 'react';
 import { useNavigation } from '@react-navigation/native';
 
 import { ScreenScrollContainer, Text, GridList } from '~/components';
-import { Film, useFavorites } from '~/services/hooks';
+import { DataResponse, useFavorites } from '~/services/hooks';
 
 export const FavoritesScreen = (): JSX.Element => {
   const { addListener } = useNavigation();
   const { getFavorites } = useFavorites();
 
-  const [favoritesList, setFavoritesList] = useState<Film[]>([]);
+  const [favoritesList, setFavoritesList] = useState<DataResponse[]>([]);
 
   const callGetFavorites = async () => {
     const favorites = await getFavorites();

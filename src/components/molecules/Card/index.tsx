@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigation } from '@react-navigation/native';
 
-import { Film } from '~/services/hooks';
+import { DataResponse } from '~/services/hooks';
 import { useDataStore } from '~/services/stores';
 
 import * as S from './styles';
@@ -18,8 +18,8 @@ const sizes = {
 };
 
 type CardProps = {
-  item: Film;
-  size: string;
+  item: DataResponse;
+  size?: string;
 };
 
 export const Card = ({ item, size }: CardProps): JSX.Element => {

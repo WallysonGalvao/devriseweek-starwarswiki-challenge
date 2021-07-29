@@ -6,12 +6,12 @@ import { Card } from '~/components/molecules';
 
 import noDataSearch from '~/assets/images/no-data-search.png';
 import noDataFavorites from '~/assets/images/no-data-favorites.png';
-import { Film } from '~/services/hooks';
+import { DataResponse } from '~/services/hooks';
 
 import * as S from './styles';
 
 type GridListProps = {
-  data: Film[];
+  data: DataResponse[];
   type: string;
   loading?: boolean;
 };
