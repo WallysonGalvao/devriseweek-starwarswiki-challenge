@@ -28,7 +28,7 @@ export const Card = ({ item, size }: CardProps): JSX.Element => {
 
   const onSelectItem = () => {
     setSelectedData(item);
-    navigate('Detail');
+    navigate('Detail', { type: item.type });
   };
 
   return (

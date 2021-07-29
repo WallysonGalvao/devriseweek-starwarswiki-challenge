@@ -3,10 +3,6 @@ import { ThemeKeysProps } from '~/styles/themes';
 
 const DB_KEY = '@StarWarsWiki:theme';
 
-type Error = {
-  error: string;
-};
-
 type ThemeReturn = {
   addTheme: (theme: ThemeKeysProps) => Promise<void>;
   getTheme: () => Promise<ThemeKeysProps>;
@@ -17,6 +13,7 @@ export const useTheme = (): ThemeReturn => {
     try {
       await AsyncStorage.setItem(DB_KEY, theme);
     } catch (error) {
+      // eslint-disable-next-line no-console
       console.error(error);
     }
   };

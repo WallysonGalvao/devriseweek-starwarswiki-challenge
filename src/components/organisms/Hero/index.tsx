@@ -97,6 +97,7 @@ export const Hero = ({ item, onDetail }: HeroProps): JSX.Element => {
         // dismissed
       }
     } catch (error) {
+      // eslint-disable-next-line no-console
       console.error(error.message);
     }
   };
